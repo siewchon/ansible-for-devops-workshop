@@ -1,0 +1,11 @@
+# why use localhost?
+# We are using Ansible to generate files on the control node with the variables that we set. 
+# We will then push these files into our repository. This gives us a repeatable, scalable 
+# and version controlled manor for generation of configs and other files.
+---
+- name: Deploy site web infrastructure
+  hosts: localhost
+  become: yes
+
+  roles:
+    - apache-simple
