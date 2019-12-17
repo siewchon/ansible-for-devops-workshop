@@ -1,0 +1,9 @@
+---
+# handlers file for apache-simple
+# Handler tasks are special tasks in an Ansible role or playbook that can be triggered by another task 
+# or tasks when the original task has caused a change to the system.
+- name: restart-apache-service
+service:
+  name: httpd
+  state: restarted
+  enabled: yes
